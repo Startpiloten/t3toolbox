@@ -1,0 +1,13 @@
+{
+  "name": "t3toolbox",
+  "version": "1.0.0",
+  "description": "Tools for Typo3",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Boris Schauer",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.6.3"
+  }
+}
