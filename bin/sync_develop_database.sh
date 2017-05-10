@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source vendor/bo/t3toolbox/lib/lib.sh
+source vendor/bo/t3toolbox/bin/lib.sh
 
 echo ${RED}
 echo "Testing"
