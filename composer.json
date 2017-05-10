@@ -1,0 +1,12 @@
+{
+    "name": "bo/t3toolbox",
+    "description": "Tools for Typo3",
+    "type": "tools",
+    "authors": [
+        {
+            "name": "Boris Schauer",
+            "email": "me@bschauer.de"
+        }
+    ],
+    "require": {}
+}
