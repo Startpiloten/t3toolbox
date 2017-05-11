@@ -3,9 +3,6 @@ var gulp = require('gulp');
 
 // Plugins
 const shell = require('gulp-shell');
-var exec = require('gulp-exec');
-var run = require('gulp-run');
-var clean = require('gulp-clean');
 
 // Settings
 process.chdir('../../');
