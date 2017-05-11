@@ -1,6 +1,6 @@
 # t3toolbox
 
-##composer.json
+## composer.json
 Add the following lins to your main composer.json:
 
 ```
@@ -13,15 +13,17 @@ Add the following lins to your main composer.json:
     ]
   }
 ``` 
+After you have added this lines please run `composer install` or `composer update`
 
-##Requirements
+## How to use
+If you use PHPStorm go to `vendor/bo/t3toolbox`. Rightclick on the `gulpfile.js` and show gulp taks. 
 
-###JQ
+## Requirements
+
+### JQ
 > jq is a lightweight and flexible command-line JSON processor.
 
 `brew install jq`
 
 https://stedolan.github.io/jq/download/
-
-
 
