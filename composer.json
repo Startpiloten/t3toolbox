@@ -7,9 +7,13 @@
         {
             "name": "Boris Schauer",
             "email": "me@bschauer.de"
+        },
+        {
+            "name": "analog.de",
+            "email": "info@analog.de"
         }
     ],
     "require": {
-
+        "helhum/typo3-console": "^4.5"
     }
 }
