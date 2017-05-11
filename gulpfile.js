@@ -5,7 +5,7 @@ var gulp = require('gulp');
 const shell = require('gulp-shell');
 
 // Settings
-process.chdir('../../');
+process.chdir('../../../');
 
 gulp.task('Console - Clear Cache', shell.task([
     'sh vendor/bo/t3toolbox/bin/console_clear_cache.sh'
