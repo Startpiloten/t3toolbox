@@ -12,7 +12,7 @@ echo ${RED}
 echo "Import Develop Databse now"
 echo ${NC}
 
-ssh ${dev_user}@${dev_url} "php_cli ${dev_path}/current/typo3cms database:export" | php typo3cms database:import
+ssh ${master_user}@${master_url} "php_cli ${master_path}/current/typo3cms database:export" | php typo3cms database:import
 
 echo
 echo

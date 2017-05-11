@@ -8,7 +8,7 @@ echo ${NC}
 
 if [ -d "web/fileadmin" ]
 then
-    rsync -avz --exclude '**/_processed_' ${dev_user}@${dev_url}:${dev_path}/fileadmin/* web/fileadmin
+    rsync -avz --exclude '**/_processed_' ${master_user}@${master_url}:${master_path}/fileadmin/* web/fileadmin
 else
     echo "WARING!! - No Local Fileadmin folder found in web/fileadmin"
     echo
@@ -17,7 +17,7 @@ fi
 
 if [ -d "web/uploads" ]
 then
-    rsync -avz --exclude ${dev_user}@${dev_url}:${dev_path}/uploads/* web/uploads
+    rsync -avz --exclude ${master_user}@${master_url}:${master_path}/uploads/* web/uploads
 else
     echo "WARING!! -  No Local Uploads folder found in web/uploads"
     echo
