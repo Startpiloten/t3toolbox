@@ -41,3 +41,7 @@ gulp.task('Master - Sync < Fileadmin/Uploads', shell.task([
 ]));
 
 gulp.task('Master - Sync < All (Database and Files)', ['Master - Sync < Fileadmin/Uploads', 'Master - Sync < Database']);
+
+gulp.task('Check', shell.task([
+    'sh vendor/bo/t3toolbox/bin/check.sh'
+]));

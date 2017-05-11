@@ -1,0 +1,11 @@
+{
+  "general": {
+    "localdomain": "tld.de"
+  },
+  "database": {
+    "name": "local_db",
+    "user": "root",
+    "host": "127.0.0.1",
+    "password": "root"
+  }
+}
