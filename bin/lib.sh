@@ -5,6 +5,7 @@ then
     source ~/.profile
 fi
 
+source vendor/bo/t3toolbox/bin/check.sh
 source vendor/bo/t3toolbox/bin/load_json.sh
 
 RED='\033[0;31m'

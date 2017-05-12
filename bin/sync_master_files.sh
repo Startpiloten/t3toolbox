@@ -2,27 +2,38 @@
 
 source vendor/bo/t3toolbox/bin/lib.sh
 
-echo ${RED}
-echo "Get Fileadmin and Uploads from Develop"
-echo ${NC}
+syncmasterfiles () {
+    echo ${RED}
+    echo "Get Fileadmin and Uploads from Develop"
+    echo ${NC}
 
-if [ -d "web/fileadmin" ]
-then
-    rsync -avz --exclude '**/_processed_' ${master_user}@${master_url}:${master_path}/fileadmin/* web/fileadmin
-else
-    echo "WARING!! - No Local Fileadmin folder found in web/fileadmin"
+    if [ -d "web/fileadmin" ]
+    then
+        rsync -avz --exclude '**/_processed_' ${master_user}@${master_url}:${master_path}/fileadmin/* web/fileadmin
+    else
+        echo "WARING!! - No Local Fileadmin folder found in web/fileadmin"
+        echo
+        exit
+    fi
+
+    if [ -d "web/uploads" ]
+    then
+        rsync -avz --exclude ${master_user}@${master_url}:${master_path}/uploads/* web/uploads
+    else
+        echo "WARING!! -  No Local Uploads folder found in web/uploads"
+        echo
+        exit
+    fi
+
     echo
-    exit
-fi
-
-if [ -d "web/uploads" ]
-then
-    rsync -avz --exclude ${master_user}@${master_url}:${master_path}/uploads/* web/uploads
-else
-    echo "WARING!! -  No Local Uploads folder found in web/uploads"
     echo
-    exit
-fi
+}
 
-echo
-echo
+if [ ${mastercheck} = "passed" ]
+then
+    syncmasterfiles
+else
+    echo ${RED}
+    echo "ERROR - Please check local.json and secret.json"
+    echo ${NC}
+fi
