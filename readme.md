@@ -1,7 +1,14 @@
 # t3toolbox
 
+![](https://snag.gy/cgjtel.jpg)
+
+## How to use
+If you use PHPStorm go to `vendor/bo/t3toolbox`. Rightclick on the `gulpfile.js` and show gulp taks. 
+
+**Use the "Check" task to see if everything is fine**
+
 ## composer.json
-Add the following lins to your main composer.json:
+Add the following lines to your main composer.json:
 
 ```
 "scripts": {
@@ -14,9 +21,6 @@ Add the following lins to your main composer.json:
   }
 ``` 
 After you have added this lines please run `composer install` or `composer update`
-
-## How to use
-If you use PHPStorm go to `vendor/bo/t3toolbox`. Rightclick on the `gulpfile.js` and show gulp taks. 
 
 ## Requirements
 
