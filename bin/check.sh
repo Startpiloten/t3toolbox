@@ -55,7 +55,7 @@ localjsoncheck=0
 checkjson () {
 
     echo
-    if [ ${dev_url} = "develop.mittwaldserver.info" ]
+    if [ ${dev_url} = "develop.tld.info" ]
     then
         printf ${RED}
         echo "Develop Server is not set"
@@ -92,7 +92,7 @@ checkjson () {
     fi
 
     echo
-    if [ ${master_url} = "master.mittwaldserver.info" ]
+    if [ ${master_url} = "master.tld.info" ]
     then
         printf ${RED}
         echo "Master Server is not set"
