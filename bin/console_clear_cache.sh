@@ -20,5 +20,10 @@ echo ${NC}
 
 php typo3cms install:fixfolderstructure
 
+if ! [ -f web/typo3conf/ENABLE_INSTALL_TOOL ]
+then
+touch web/typo3conf/ENABLE_INSTALL_TOOL
+fi
+
 echo
 echo
