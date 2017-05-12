@@ -46,6 +46,11 @@ checkfiles () {
         cp -r vendor/bo/t3toolbox/lib/t3settings/secret.json t3settings/secret.json
         printf ${NC}
     fi
+
+    if ! [ -d t3settings/.tmp ]
+    then
+        mkdir t3settings/.tmp
+    fi
 }
 
 devjsoncheck=0

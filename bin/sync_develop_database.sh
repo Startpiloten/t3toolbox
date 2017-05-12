@@ -7,7 +7,7 @@ syncdevdb () {
     echo "Backup Local Database before Import"
     echo ${NC}
 
-    php typo3cms database:export > t3settings/.tmp/local_db_backup.sql
+    php typo3cms database:export > t3settings/.tmp/${local_dbname}_backup.sql
 
     echo ${RED}
     echo "Import Develop Databse now"
