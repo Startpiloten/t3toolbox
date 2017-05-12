@@ -2,13 +2,13 @@
 
 ![](https://snag.gy/cgjtel.jpg)
 
-## How to use
-If you use PHPStorm go to `vendor/bo/t3toolbox`. Rightclick on the `gulpfile.js` and show gulp taks. 
+## How to install
 
-**Use the "Check" task to see if everything is fine**
+### Add t3toolbox to your composer.json
+Run: `composer require bo/t3toolbox`
 
-## composer.json
-Add the following lines to your main composer.json:
+
+### Add the following lines to your main composer.json:
 
 ```
 "scripts": {
@@ -21,6 +21,11 @@ Add the following lines to your main composer.json:
   }
 ``` 
 After you have added this lines please run `composer install` or `composer update`
+
+## How to use
+If you use PHPStorm go to `vendor/bo/t3toolbox`. Rightclick on the `gulpfile.js` and show gulp taks. 
+
+**Use the "Check" task to see if everything is fine**
 
 ## Requirements
 
