@@ -13,7 +13,7 @@ syncdevdb () {
     echo "Import Develop Databse now"
     echo ${NC}
 
-    ssh ${dev_user}@${dev_url} "php_cli ${dev_path}/current/typo3cms database:export" | php typo3cms database:import
+    ssh ${dev_user}@${dev_url} "if hash php_cli 2>/dev/null; then php_cli ${dev_path}/current/typo3cms database:export ; else php ${dev_path}/current/typo3cms database:export; fi" | php typo3cms database:import
 
     echo
     echo

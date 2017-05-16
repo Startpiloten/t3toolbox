@@ -13,7 +13,7 @@ syncmasterdb () {
     echo "Import Develop Databse now"
     echo ${NC}
 
-    ssh ${master_user}@${master_url} "php_cli ${master_path}/current/typo3cms database:export" | php typo3cms database:import
+    ssh ${master_user}@${master_url} "if hash php_cli 2>/dev/null; then php_cli ${master_path}/current/typo3cms database:export ; else php ${master_path}/current/typo3cms database:export; fi" | php typo3cms database:import
 
     echo
     echo
