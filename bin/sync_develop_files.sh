@@ -18,7 +18,7 @@ syncdevfiles () {
 
     if [ -d "web/uploads" ]
     then
-        rsync -avz --exclude ${dev_user}@${dev_url}:${dev_path}/uploads/* web/uploads
+        rsync -avz ${dev_user}@${dev_url}:${dev_path}/uploads/* web/uploads
     else
         echo "WARING!! -  No Local Uploads folder found in web/uploads"
         echo
