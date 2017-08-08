@@ -19,9 +19,9 @@ syncmasterdb () {
     echo
 }
 
-if [ ${developcheck} = "passed" ] && [ ${localcheck} = "passed" ]
+if [ ${mastercheck} = "passed" ] && [ ${localcheck} = "passed" ]
 then
-    syncdevdb
+    syncmasterdb
 else
     echo ${RED}
     echo "ERROR - Please check local.json and secret.json"
