@@ -10,7 +10,7 @@ syncmasterdb () {
     php typo3cms database:export > t3settings/.tmp/${local_dbname}_backup.sql
 
     echo ${RED}
-    echo "Import Develop Databse now"
+    echo "Import Master Databse now"
     echo ${NC}
 
     ssh ${master_user}@${master_url} "if hash php_cli 2>/dev/null; then php_cli ${master_path}/current/typo3cms database:export ; else php ${master_path}/current/typo3cms database:export; fi" | php typo3cms database:import
