@@ -61,5 +61,10 @@ gulp.task('Master:Sync:Files', shell.task([
 
 gulp.task('Master:Sync:Files&Database', ['MasterSync:Files', 'Master:Sync:Database']);
 
+gulp.task('Local:SetLocalDomain', shell.task([
+    'mysql -u' + localJson.database.user + ' -p' + localJson.database.password + ' -h' + localJson.database.host + ' -e "UPDATE ' + localJson.database.name + '.sys_domain SET hidden = 1"',
+    'mysql -u' + localJson.database.user + ' -p' + localJson.database.password + ' -h' + localJson.database.host + ' -e "INSERT INTO ' + localJson.database.name + '.sys_domain (pid, hidden, domainName) VALUES (\'1\',\'0\',\'' + localJson.general.localdomain + '\')"'
+]));
+
 gulp.task('default', ['Check']);
 
