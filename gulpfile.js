@@ -59,7 +59,7 @@ gulp.task('Master:Sync:Files', shell.task([
     'sh vendor/bo/t3toolbox/bin/sync_master_files.sh'
 ]));
 
-gulp.task('Master:Sync:Files&Database', ['MasterSync:Files', 'Master:Sync:Database']);
+gulp.task('Master:Sync:Files&Database', ['Master:Sync:Files', 'Master:Sync:Database']);
 
 gulp.task('Local:SetLocalDomain', shell.task([
     'mysql -u' + localJson.database.user + ' -p' + localJson.database.password + ' -h' + localJson.database.host + ' -e "UPDATE ' + localJson.database.name + '.sys_domain SET hidden = 1"',
