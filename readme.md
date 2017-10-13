@@ -1,6 +1,6 @@
 # t3toolbox
 
-![](https://snag.gy/cgjtel.jpg)
+![](https://snag.gy/UdYIwK.jpg)
 
 ## How to install
 
