@@ -6,7 +6,7 @@
   "author": "Boris Schauer",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-shell": "^0.6.3"
   },
   "dependencies": {
