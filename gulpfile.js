@@ -42,7 +42,7 @@ gulp.task('Develop:Sync:Files', shell.task([
     'sh vendor/bo/t3toolbox/bin/sync_develop_files.sh'
 ]));
 
-gulp.task('Develop:Sync:Files&Database', gulp.series(gulp.parallel('Develop:Sync:Files', 'Develop:Sync:Database')));
+gulp.task('Develop:Sync:All', gulp.series(gulp.parallel('Develop:Sync:Files', 'Develop:Sync:Database')));
 
 if (secretJson.master.php) {
     gulp.task('Master:Sync:Database', shell.task([
@@ -59,7 +59,7 @@ gulp.task('Master:Sync:Files', shell.task([
     'sh vendor/bo/t3toolbox/bin/sync_master_files.sh'
 ]));
 
-gulp.task('Master:Sync:Files&Database', gulp.series(gulp.parallel('Master:Sync:Files', 'Master:Sync:Database')));
+gulp.task('Master:Sync:All', gulp.series(gulp.parallel('Master:Sync:Files', 'Master:Sync:Database')));
 
 gulp.task('Local:SetLocalDomain', shell.task([
     'mysql -u' + localJson.database.user + ' -p' + localJson.database.password + ' -h' + localJson.database.host + ' -e "UPDATE ' + localJson.database.name + '.sys_domain SET hidden = 1"',
