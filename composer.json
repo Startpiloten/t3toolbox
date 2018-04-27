@@ -14,6 +14,6 @@
         }
     ],
     "require": {
-        "helhum/typo3-console": ">=4.5"
+        "helhum/typo3-console": "*"
     }
 }
