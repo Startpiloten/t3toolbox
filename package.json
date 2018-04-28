@@ -6,11 +6,9 @@
   "author": "Boris Schauer",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-shell": "^0.6.3"
-  },
-  "dependencies": {
-    "file-exists": "^3.0.2"
+    "gulp": "^4.0",
+    "gulp-shell": "^0.6.3",
+    "file-exists": "^5.0.1"
   },
   "scripts": {
     "Check": "./node_modules/gulp/bin/gulp.js Check",
