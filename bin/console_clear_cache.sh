@@ -27,16 +27,16 @@ echo "Clear Optcache Now"
 curl -insecure http://${local_domain}/flush_cache.php?token=clearcache
 echo ${NC}
 else
-cp -r vendor/bo/t3toolbox/lib/flush_cache.php web/flush_cache.php
+cp -r vendor/bo/t3toolbox/lib/flush_cache.php public/flush_cache.php
 echo ${RED}
 echo "Clear Optcache Now"
 curl -insecure http://${local_domain}/flush_cache.php?token=clearcache
 echo ${NC}
 fi
 
-if ! [ -f web/typo3conf/ENABLE_INSTALL_TOOL ]
+if ! [ -f public/typo3conf/ENABLE_INSTALL_TOOL ]
 then
-touch web/typo3conf/ENABLE_INSTALL_TOOL
+touch public/typo3conf/ENABLE_INSTALL_TOOL
 fi
 
 echo
