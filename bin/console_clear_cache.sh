@@ -6,7 +6,7 @@ echo ${RED}
 echo "Remove typo3temp Files"
 echo ${NC}
 
-rm -rfv web/typo3temp/*
+rm -rfv public/typo3temp/*
 
 echo ${RED}
 echo "Fix Folder Structure"
@@ -20,7 +20,7 @@ echo ${NC}
 
 php typo3cms cache:flush --force
 
-if [ -f web/flush_cache.php ]
+if [ -f public/flush_cache.php ]
 then
 echo ${RED}
 echo "Clear Optcache Now"
