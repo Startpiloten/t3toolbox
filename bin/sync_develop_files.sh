@@ -25,11 +25,27 @@ syncdevfiles () {
         exit
     fi
 
+    if [ -d "web/fileadmin" ]
+    then
+        rsync -avz --exclude '**/_processed_' ${dev_user}@${dev_url}:${dev_path}/fileadmin/* web/fileadmin
+    else
+        echo "WARING!! - No Local Fileadmin folder found in web/fileadmin"
+        echo
+        exit
+    fi
+
+    if [ -d "web/uploads" ]
+    then
+        rsync -avz ${dev_user}@${dev_url}:${dev_path}/uploads/* web/uploads
+    else
+        echo "WARING!! -  No Local Uploads folder found in web/uploads"
+        echo
+        exit
+    fi
+
     echo
     echo
 }
-
-
 
 if [ ${developcheck} = "passed" ]
 then
