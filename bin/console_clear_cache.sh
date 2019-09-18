@@ -6,11 +6,22 @@ echo ${RED}
 echo "Remove typo3temp Files"
 echo ${NC}
 
-rm -rfv web/typo3temp/*
+if [ -d "public/uploads" ]
+then
+    rm -rfv public/typo3temp/*
+    echo ${RED}
+    echo "Fix Folder Structure"
+    echo ${NC}
+fi
+if [ -d "web/uploads" ]
+then
+    rm -rfv web/typo3temp/*
+    echo ${RED}
+    echo "Fix Folder Structure"
+    echo ${NC}
+fi
 
-echo ${RED}
-echo "Fix Folder Structure"
-echo ${NC}
+
 
 php typo3cms install:fixfolderstructure
 
@@ -19,6 +30,20 @@ echo "Clear Caches Now"
 echo ${NC}
 
 php typo3cms cache:flush --force
+
+if [ -f public/flush_cache.php ]
+then
+echo ${RED}
+echo "Clear Optcache Now"
+curl -insecure http://${local_domain}/flush_cache.php?token=clearcache
+echo ${NC}
+else
+cp -r vendor/bo/t3toolbox/lib/flush_cache.php public/flush_cache.php
+echo ${RED}
+echo "Clear Optcache Now"
+curl -insecure http://${local_domain}/flush_cache.php?token=clearcache
+echo ${NC}
+fi
 
 if [ -f web/flush_cache.php ]
 then
